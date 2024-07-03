@@ -1,0 +1,333 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(../img/fondo.jfif);
+}
+
+
+
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+}
+
+nav{
+    grid-area: nav;
+}
+
+.icono-nav{
+    display: flex;
+    align-items: center;
+}
+
+.filtro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botones-filtro{
+    display: flex;
+    border: 1px solid rgb(203, 134, 209);
+    justify-content: space-evenly;
+    padding: 0px;
+    font-size: 20px;
+    background-color: bisque;
+    
+}
+
+
+
+.boton1{
+    background-color: rgb(213, 183, 223);
+    border: 1px solid rgb(172, 111, 192);
+    border-radius: 0px;
+    padding-left: 85px;
+    padding-right: 85px;
+    padding-bottom: 10px;
+    transition: all 1s;
+    margin: 20px;
+    cursor: pointer;
+    
+
+    
+}
+
+.boton1:hover{
+    background-color: rgb(164, 123, 202);
+    color: white;
+
+}
+
+main{
+    grid-area: main;
+    background-color: rgba(231, 45, 185, 0.651);
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.carta{
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;   
+    padding: 0px;
+    
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+img:hover{
+    width: 250px;
+    height: 250px;
+}
+
+.boton{
+    border: 2px solid white;
+    background-color: rgb(245, 69, 151);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+menu{
+    grid-area: menu;
+    background-color: rgb(199, 89, 226);
+
+}
+
+ul{
+    list-style: none;
+}
+
+
+
+footer{
+    grid-area: footer;
+    background-color: rgb(96, 15, 112);
+    padding-top: 20px;
+
+}
+
+.footer-icons{   
+    margin-top: 10PX;   
+}
+
+.contacto{
+    margin: 5px;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+}
+
+.informacion{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin: 5px;
+    color: aliceblue;
+    border: 1px solid white;
+}
+
+.telefono{
+    margin: 5px;
+}
+
+.footer-complet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: aliceblue;
+
+}
+ 
+.grid-container{
+    display: grid;
+    grid-template-areas:
+     "header"
+     "nav"
+     "main"
+     "menu"
+     "footer";
+}
+
+@media (max-width: 576px) {
+    ul{
+        display: none;
+    }
+    header{
+        display: none;
+    }
+
+    menu{
+        display: none;
+    }
+    
+}
+
+@media (min-width:577px) {
+    .grid-container{
+        display: grid;
+        grid-template-areas: 
+        "menu header header header"
+        "menu main main main"
+        "menu main main main"
+        "footer main main main";  
+        gap: 10px;
+        margin: 5px;
+        justify-content: center;
+    }
+
+    nav{
+        display: none;
+    }
+   
+
+    .cartas{
+        display: grid;
+        grid-area: main;
+        background-color: rgba(233, 125, 233, 0.89);
+        grid-template-columns: auto auto auto auto;
+    }
+
+    header{
+        grid-area: header;
+        text-align: center;
+        background-color: rgba(243, 6, 116, 0.863);
+        color: aliceblue;
+    }
+   
+    .menu-lateral{
+        margin: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: aliceblue;
+        font-size: 20px;
+    }
+
+    li{
+        font-size: 20px;
+        transition: all 1s;
+        color: rgb(91, 22, 100);
+    }
+
+    li:hover{
+        font-size: 30px;
+        cursor: pointer;
+        color: aliceblue;
+    }
+
+    .menu-lateral:hover{
+        font-size: 30px;
+    }
+
+    .icon-menu{
+        padding: 10px;
+        transition: background-color 0.3s ease-out;
+        transition: all 1s;
+    }
+
+    .icon-menu:hover{
+        color: rgb(97, 8, 100);
+
+    }
+
+    span{
+        color: rgba(40, 38, 43, 0.705);
+    }
+
+    img{
+        width: 200px;
+        height: 200px;
+        transition: all 2s;
+    }
+
+    img:hover{
+        width: 250px;
+        height: 250px;
+        cursor: pointer;
+
+    }
+    .boton{
+        border: 2px solid white;
+        background-color: rgb(245, 69, 151);
+        padding: 10px;
+        border-radius: 5px;
+        transition: all 1s;
+
+    }
+
+    .boton:hover{
+        cursor: pointer;
+        border-radius: 20px;
+        padding: 20px;
+
+    }
+
+    footer{
+        grid-area: footer;
+        background-color: rgb(96, 15, 112);
+        padding-top: 20px;
+    
+    }
+    
+    .footer-icons{   
+        margin-top: 10PX;  
+        cursor: pointer; 
+    }
+
+    .footer-icons:hover{
+        background-color: black;
+    }
+    
+    .contacto{
+        margin: 5px;
+        color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid white;
+    }
+    
+    .informacion{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        margin: 5px;
+        color: aliceblue;
+        border: 1px solid white;
+    }
+    
+    .telefono{
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    .telefono:hover{
+        color: aqua;
+    }
+
+    .correo{
+        cursor: pointer;
+    }
+
+    .correo:hover{
+        color: aqua;
+    }
+    
+    .footer-complet{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: aliceblue;   
+}
+}
